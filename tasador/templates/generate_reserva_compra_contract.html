@@ -1,0 +1,23 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}GENERAR RESERVA DE COMPRA{% endblock %}
+
+{% block content %}
+    <h2>GENERAR RESERVA</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generar Documento</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'home' %}" class="btn">Volver al Inicio</a>
+{% endblock %}
+
+</body>
+</html>

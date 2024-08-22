@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <h2>¡Hola! ¿Cómo estás? ¿Qué haremos hoy?</h2>
+    <br>
+    <p>Esta es la página de inicio de nuestro sitio web. Aquí puedes encontrar todas las opciones para facilitar tu trabajo.</p>
+    <p>Todos los documentos salen listos en formato DOCX, para que puedas ultimar detalles a tu gusto.</p>
+    <br>
+    <br>
+    <br>
+    <p><b>Generar contrato</b>: Aqui obtendras un contrato de alquiler completo, solo tendras que rellenar los campos solicitados con la mayor informacion</p>
+    <br>
+    <p><b>Gastos y condiciones</b>: Aqui podras detallar los gastos y condiciones que tienen cada una de las partes en una venta o el inquilino para alquilar</p>
+    <br>
+    <p><b>Reserva de compra</b>: Aqui podras detallar los detalles de la oferta por parte del comprador </p>
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'generate_contract' %}" class="btn">Generar Contrato</a>
+    
+    <a href="{% url 'generate_gastos_contract' %}" class="btn">Gastos e condiciones</a>
+    
+    <a href="{% url 'generate_reserva_compra_contract' %}" class="btn">Reserva de Compra</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 style="text-align: center;">Calculadora de aumento de alquiler ENLACE EXTERNO INTEGRADO</h2>
+
+    <iframe src="https://calculadora.cmcpsi.org.ar/" width="100%" height="600px" style="border: none;"></iframe>
+
+{% endblock %}

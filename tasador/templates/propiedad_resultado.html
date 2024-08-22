@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado de la Valuación</title>
+</head>
+<body>
+    <h1>Resultado de la Valuación</h1>
+    <p>Tipo de Unidad: {{ tipo_unidad }}</p>
+    <p>Localidad: {{ localidad }}</p>
+    <p>Metros Cuadrados: {{ metros_cuadrados }}</p>
+    <p>Dirección: {{ direccion }}</p>
+    <h2>Propiedades Comparables</h2>
+    <ul>
+        {% for propiedad in propiedades %}
+            <li>Precio: ${{ propiedad.precio }}</li>
+        {% endfor %}
+    </ul>
+    <p>Precio Promedio: ${{ precio_promedio }}</p>
+</body>
+</html>

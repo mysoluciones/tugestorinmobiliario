@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}GENERAR  INFORME DE GASTOS{% endblock %}
+
+{% block content %}
+    <h2>GENERAR  INFORME DE GASTOS</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <p>{{ form.as_p }}</p>
+        </div>
+        <button type="submit" class="btn">Generar informe de gastos</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'home' %}" class="btn">Volver al Inicio</a>
+{% endblock %}

@@ -6,9 +6,9 @@ from django.conf import settings
 from docx import Document
 from io import BytesIO
 
-def home(request):
+def index(request):
     """Vista para la página de inicio."""
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 def replace_placeholders(text, data):
     """Reemplaza los placeholders en el texto con los datos proporcionados."""
